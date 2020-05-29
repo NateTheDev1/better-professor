@@ -1,0 +1,600 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  background: #373737;
+  font-family: "Montserrat";
+  color: white;
+  font-size: 100%;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 1.25%;
+}
+.container .emphasis-text {
+  color: #ff7770;
+}
+.container header {
+  width: 100%;
+  margin-bottom: 10%;
+}
+.container header nav {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+@media (max-width: 550px) {
+  .container header nav {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+@media (max-width: 550px) {
+  .container header nav img {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+.container header nav .nav-links {
+  font-size: 1.1rem;
+  font-weight: 800;
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+  align-content: baseline;
+}
+@media (max-width: 960px) {
+  .container header nav .nav-links {
+    width: 25%;
+  }
+}
+@media (max-width: 750px) {
+  .container header nav .nav-links {
+    width: 30%;
+  }
+}
+@media (max-width: 550px) {
+  .container header nav .nav-links {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    justify-content: space-between;
+  }
+}
+.container header nav .nav-links a {
+  text-decoration: none;
+  color: #ff7770;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.container header nav .nav-links a:hover {
+  color: white;
+}
+.container header nav .nav-links .active {
+  color: white;
+}
+.container .top-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3%;
+}
+@media (max-width: 550px) {
+  .container .top-content {
+    text-align: center;
+  }
+}
+.container .top-content i {
+  width: 40%;
+  font-size: 25rem;
+}
+@media (max-width: 999px) {
+  .container .top-content i {
+    width: 45%;
+    font-size: 22rem;
+  }
+}
+@media (max-width: 850px) {
+  .container .top-content i {
+    display: none;
+  }
+}
+.container .top-content div {
+  width: 60%;
+}
+@media (max-width: 850px) {
+  .container .top-content div {
+    width: 100%;
+  }
+}
+.container .top-content div p {
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 5%;
+  line-height: 2;
+}
+.container .top-content div button {
+  width: 200px;
+  height: 35px;
+  background: #ff7770;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.container .top-content div button:hover {
+  background: white;
+  color: black;
+}
+.container .info-row {
+  margin-top: 5%;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  align-content: center;
+}
+@media (max-width: 600px) {
+  .container .info-row {
+    flex-direction: column;
+  }
+}
+.container .info-row div {
+  width: 30%;
+}
+@media (max-width: 600px) {
+  .container .info-row div {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+}
+.container .info-row div i {
+  font-size: 6rem;
+}
+.container .info-row div p {
+  margin-top: 5%;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.container .bottom-content {
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+.container .bottom-content div {
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-bottom: 5%;
+}
+@media (max-width: 800px) {
+  .container .bottom-content div {
+    flex-direction: column;
+    margin-bottom: 10%;
+  }
+}
+.container .bottom-content div img {
+  width: 40%;
+  height: 50%;
+}
+@media (max-width: 800px) {
+  .container .bottom-content div img {
+    margin: 0 auto;
+    width: 75%;
+    margin-bottom: 5%;
+  }
+}
+.container .bottom-content div p {
+  margin: 0 auto;
+  align-self: center;
+}
+@media (max-width: 800px) {
+  .container .bottom-content .graphic-2 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+.container footer {
+  width: 100%;
+  color: #ff7770;
+  font-weight: 400;
+  margin-top: 3%;
+  text-align: center;
+}
+.container footer .contact h2 {
+  letter-spacing: 3px;
+  margin-bottom: 2%;
+}
+.container footer .contact input {
+  width: 30%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  padding: 2%;
+  box-sizing: border-box;
+}
+.container footer .contact button {
+  height: 40px;
+  width: 15%;
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 2%;
+  display: block;
+  color: white;
+  background: #ff7770;
+  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.container footer .contact button:hover {
+  transition: 0.3s;
+  background: white;
+  color: black;
+}
+.container footer p {
+  text-align: center;
+  margin-top: 5%;
+}
+.container .about-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 5%;
+}
+.container .about-header h2 {
+  align-self: center;
+  color: white;
+  font-weight: 800;
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 5px;
+}
+.container .about-header i {
+  margin-top: 3%;
+  text-align: center;
+  font-size: 5rem;
+  color: #ff7770;
+}
+.container .profiles {
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 690px) {
+  .container .profiles {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+}
+.container .profiles .profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 25%;
+  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.76);
+  background: white;
+  text-align: center;
+}
+@media (max-width: 690px) {
+  .container .profiles .profile {
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    width: 55%;
+    margin-bottom: 3%;
+  }
+}
+@media (max-width: 350px) {
+  .container .profiles .profile {
+    width: 80%;
+  }
+}
+.container .profiles .profile img {
+  width: 100%;
+  margin-bottom: 2%;
+}
+.container .profiles .profile p {
+  color: black;
+  line-height: 2;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.container .profiles .profile h3 {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: black;
+}
+.container .profiles .profile a {
+  text-decoration: none;
+  color: #ff7770;
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+.container .profiles .profile a i {
+  font-size: 2.5rem;
+}
+.container .info-header {
+  margin-bottom: 3%;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container .info-header img {
+  width: 50%;
+}
+@media (max-width: 775px) {
+  .container .info-header img {
+    width: 100%;
+  }
+}
+.container .info-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 3%;
+}
+@media (max-width: 775px) {
+  .container .info-header h2 {
+    display: none;
+  }
+}
+.container hr {
+  border: 1px solid #ff7770;
+}
+.container .informational .lead {
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 3%;
+  padding: 1% 20px;
+}
+@media (max-width: 810px) {
+  .container .informational .lead {
+    margin-top: 20%;
+  }
+}
+@media (max-width: 650px) {
+  .container .informational .lead {
+    margin-top: 5%;
+  }
+}
+.container .informational .lead h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2%;
+  margin-top: 3%;
+  color: #ff7770;
+}
+.container .informational .lead p {
+  font-size: 1.1rem;
+  line-height: 2;
+}
+.container .informational .features {
+  margin-top: 3%;
+  margin-bottom: 10%;
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 650px) {
+  .container .informational .features {
+    display: none;
+  }
+}
+.container .informational .features div {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 1% 20px;
+  text-align: center;
+  width: 20%;
+  height: 150px;
+}
+.container .informational .features div i {
+  color: #ff7770;
+  font-size: 3rem;
+  margin-bottom: 5%;
+}
+.container .informational .features div p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.container .informational .pricing {
+  width: 100%;
+  height: 200px;
+  margin-top: 8%;
+  margin-bottom: 15%;
+  text-align: center;
+}
+@media (max-width: 999px) {
+  .container .informational .pricing {
+    display: none;
+  }
+}
+.container .informational .pricing h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ff7770;
+}
+.container .informational .pricing .prices {
+  height: 100%;
+  display: flex;
+  margin-top: 3%;
+  justify-content: space-around;
+}
+.container .informational .pricing .prices div {
+  width: 20%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1% 20px;
+  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.container .informational .pricing .prices div h3 {
+  color: #7da453;
+  font-weight: 800;
+}
+.container .informational .pricing .prices div i {
+  color: #7da453;
+  font-weight: bold;
+}
+.container .informational .pricing .prices div ul li {
+  margin-top: 10%;
+}
